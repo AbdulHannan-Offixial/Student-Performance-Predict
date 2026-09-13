@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.git
+.gitignore
+*.md
+
+# training data isn't needed once the model is trained and saved
+data/

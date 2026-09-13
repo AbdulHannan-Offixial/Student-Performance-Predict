@@ -1,0 +1,16 @@
+# ---- Web framework & server ----
+fastapi>=0.128.0
+uvicorn[standard]>=0.32.0
+
+# ---- Machine learning ----
+# scikit-learn and joblib are pinned exactly (not >=) because
+# student_model.pkl was trained and saved with these exact versions.
+# A newer scikit-learn loading an older pickled model can silently give
+# different results — pinning keeps train-time and serve-time identical.
+scikit-learn==1.8.0
+pandas>=2.2.0
+numpy>=1.26.0
+joblib==1.5.3
+
+# ---- Data validation (used internally by FastAPI) ----
+pydantic>=2.9.0
